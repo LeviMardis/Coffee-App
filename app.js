@@ -31,3 +31,4 @@ const start = () => {
 
 const display = document.getElementById('timer')
 document.getElementById('startButton').addEventListener('click', start)
+/* changes */
