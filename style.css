@@ -6,18 +6,6 @@ body{
   background: linear-gradient(180deg, #E68673 0%, #E67373 32.96%, #E673B1 65.25%, #7393E6 100%);
 }
 
-p{
-  font-family: SF Mono;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 36px;
-  letter-spacing: 0.1em;
-  text-align: center;
-}
-
-
-
 
 /*ICON*/
 
@@ -27,19 +15,53 @@ p{
 
 /*MODULES*/
 
-div#coffee, div#ratio, div#water {
+.container {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-position: absolute;
-width: 340px;
-height: 110px;
-left: 38px;
-top: 737px;
-
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 340px;
+  height: 110px;
 }
+
+.container > p{
+  font-family: monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #7393E6;
+}
+
+div#coffee, div#ratio, div#water {
+  background: #212738;
+  border: 2px solid #0E0F12;
+  box-sizing: border-box;
+  border-radius: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+
+div > p {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FBFAF8;
+}
+
 
 
 
