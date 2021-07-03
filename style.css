@@ -9,8 +9,8 @@ body{
 #flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
@@ -23,7 +23,7 @@ test
 
 /*MODULES*/
 
-.section {
+#flex-container > div {
   display: flex;
   flex-direction: column;
   align-items: flex-Start;
@@ -32,7 +32,7 @@ test
   height: 110px;
 }
 
-.section > p{
+#flex-container > div > p{
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
@@ -56,7 +56,7 @@ div#coffee-slider, div#ratio-slider, div#water-slider {
   margin: 8px 0px;
 }
 
-div > p {
+#flex-container > div > div > p {
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
