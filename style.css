@@ -9,6 +9,8 @@ body{
 #flex-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
@@ -21,16 +23,16 @@ test
 
 /*MODULES*/
 
-.container {
+#flex-container > div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-Start;
   padding: 0px;
   width: 340px;
   height: 110px;
 }
 
-.container > p{
+#flex-container > div > p{
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
@@ -43,7 +45,7 @@ test
   color: #7393E6;
 }
 
-div#coffee, div#ratio, div#water {
+div#coffee-slider, div#ratio-slider, div#water-slider {
   background: #212738;
   border: 2px solid #0E0F12;
   box-sizing: border-box;
@@ -54,7 +56,7 @@ div#coffee, div#ratio, div#water {
   margin: 8px 0px;
 }
 
-div > p {
+#flex-container > div > div > p {
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
@@ -65,6 +67,10 @@ div > p {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: #FBFAF8;
+}
+
+p {
   color: #FBFAF8;
 }
 
