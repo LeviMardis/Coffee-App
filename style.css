@@ -1,7 +1,57 @@
+/*RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
 /*BODY*/
 
 
-body{
+body {
   background: rgba(19, 23, 31, 1);
   /*background: linear-gradient(180deg, #E68673 0%, #E67373 32.96%, #E673B1 65.25%, #7393E6 100%);*/
 }
@@ -11,28 +61,29 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 2vh 0px 0px 0px;
 }
 
 
 /*ICON*/
 
-test
+
 
 
 
 
 /*MODULES*/
 
+/*sections*/
 #flex-container > div {
   display: flex;
   flex-direction: column;
   align-items: flex-Start;
-  padding: 0px;
-  width: 340px;
-  height: 110px;
+  margin: 2vh 0px 0px 0px;
 }
 
-#flex-container > div > p{
+/*titles*/
+#flex-container > div > p {
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
@@ -43,40 +94,39 @@ test
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #7393E6;
+  margin: 0px 0px 4px 8px;
 }
 
-div#coffee-slider, div#ratio-slider, div#water-slider {
+/*sliders*/
+#flex-container > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
   background: #212738;
   border: 2px solid #0E0F12;
   box-sizing: border-box;
   border-radius: 20px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 8px 0px;
+  width: 340px;
+  height: 84px;
 }
 
 #flex-container > div > div > p {
   font-family: monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  display: flex;
-  align-items: center;
   text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  width: 118px;
+  font-size: 30px;
+  line-height: 30px;
   color: #FBFAF8;
 }
 
-p {
-  color: #FBFAF8;
+#flex-container > div > div p:nth-child(odd) {
+  color: #1A1F2B;
 }
-
-
-
-
 
 /*---COFFEE*/
 
