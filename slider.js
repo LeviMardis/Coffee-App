@@ -15,7 +15,7 @@ class Slider {
 
   numChange = (e) => {
     this.x = (e.clientX - this.xd) / 20;
-    this.textDisplay.innerHTML = Math.floor(this.x + this.output);
+    this.textDisplay.innerHTML = (this.x + this.output).toFixed(0);
   };
 
   initialize = () => {
