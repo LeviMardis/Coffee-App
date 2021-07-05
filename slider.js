@@ -8,13 +8,13 @@ class Slider {
   }
 
   startSlide = (e) => {
-    this.xd = e.clientX;
+    this.xd = e.touches[0].clientX;
     //this.divId.addEventListener("mousemove", this.numChange);
     this.divId.addEventListener("touchmove", this.numChange);
   };
 
   numChange = (e) => {
-    this.x = (e.clientX - this.xd) / 20;
+    this.x = (e.touches[0].clientX - this.xd) / 20;
     this.textDisplay.innerHTML = (this.x + this.output).toFixed(0);
   };
 
