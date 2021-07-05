@@ -106,8 +106,9 @@ div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
   border: 2px solid #0E0F12;
   box-sizing: border-box;
   border-radius: 20px;
-  width: 340px;
-  height: 84px;
+  width: 80vw;
+  height: 8vh;
+	min-height: 86px;
 }
 
 #flex-container > div > div > p {
@@ -117,11 +118,13 @@ div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
   text-align: center;
   font-size: 30px;
   line-height: 30px;
+	width: 30%;
   color: #FBFAF8;
 }
 
 #flex-container > div > div p:nth-child(odd) {
   color: #1A1F2B;
+	font-size: 24px;
 }
 
 /*---COFFEE*/
