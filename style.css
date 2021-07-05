@@ -110,10 +110,7 @@ p {
   align-items: center;
   justify-content: space-between;
 	padding: 1rem 2rem;
-}
-
-div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
-  background: #212738;
+	background: #212738;
   border: 2px solid #0E0F12;
   box-sizing: border-box;
   border-radius: 1rem;
@@ -127,16 +124,16 @@ div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
 	width: 30%;
   color: #FBFAF8;
 }
 
 #flex-container > div > div p:nth-of-type(odd):not(#timer) {
   color: #1A1F2B;
-	font-size: 2.5rem;
-	line-height: 2.5rem;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
 }
 
 /*---COFFEE*/
