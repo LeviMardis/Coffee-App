@@ -50,25 +50,12 @@ table {
 
 /*BODY*/
 
-body:before, body:after {
-    content: "";
-    position: fixed;
-    background: #E57373;
-    left: 0;
-    right: 0;
-    height: 2px;
-}
-body:before {
-    top: 0;
-}
-body:after {
-    bottom: 0;
-}
 body {
 		background: rgba(19, 23, 31, 1);
-    border-left: 2px solid #E57373;
-    border-right: 2px solid #E57373;
-
+		border: 10px solid;
+	  border-image-slice: 1;
+	  border-width: 2px;
+		border-image-source: linear-gradient(180deg, #E68673 0%, #E67373 32%, #E673B1 65%, #7393E6 100%);
 }
 
 #flex-container {
@@ -76,8 +63,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-	border: 2px solid;
-	border-image-source: linear-gradient(180deg, #E68673 0%, #E67373 32.96%, #E673B1 65.25%, #7393E6 100%);
 }
 
 #flex-container > div:nth-child(1) {
