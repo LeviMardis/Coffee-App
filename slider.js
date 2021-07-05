@@ -10,6 +10,7 @@ class Slider {
   startSlide = (e) => {
     this.xd = e.clientX;
     this.divId.addEventListener("mousemove", this.numChange);
+    this.divId.addEventListener("touchmove", this.numChange);
   };
 
   numChange = (e) => {
@@ -19,10 +20,15 @@ class Slider {
 
   initialize = () => {
     this.divId.addEventListener("mousedown", this.startSlide);
+    this.divId.addEventListener("touchstart", this.startSlide);
 
     document.addEventListener("mouseup", () => {
       this.output += this.x;
       this.divId.removeEventListener("mousemove", this.numChange);
+    });
+    document.addEventListener("touchend", () => {
+      this.output += this.x;
+      this.divId.removeEventListener("touchmove", this.numChange);
     });
   };
 }
