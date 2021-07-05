@@ -52,6 +52,7 @@ table {
 
 body {
 		background: rgba(19, 23, 31, 1);
+		height: 99.4vh;
 		border: 10px solid;
 	  border-image-slice: 1;
 	  border-width: 2px;
@@ -71,8 +72,15 @@ body {
 	margin: 8vh 0vh 4vh 0vh;
 }
 
-
-
+p {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
 /*SECTIONS*/
 #flex-container > div {
@@ -127,7 +135,8 @@ div#coffee-slider, div#ratio-slider, div#water-slider, div#timer-slider {
 
 #flex-container > div > div p:nth-of-type(odd):not(#timer) {
   color: #1A1F2B;
-	font-size: 2.4rem;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
 }
 
 /*---COFFEE*/
