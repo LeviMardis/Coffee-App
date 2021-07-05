@@ -1,19 +1,19 @@
 const timer = document.getElementById("timer");
-const button = document.getElementById("reset")
+const button = document.getElementById("reset");
 let interval;
 let pause = false;
-let time = 0
+let time = 0;
 
 const start = () => {
   if (!pause) {
     interval = setInterval(update, 100);
     pause = true;
-    button.disabled = true
+    button.disabled = true;
   } else {
     clearInterval(interval);
     interval = null;
     pause = false;
-    button.disabled = false
+    button.disabled = false;
   }
 };
 const update = () => {
@@ -22,12 +22,12 @@ const update = () => {
 };
 const reset = () => {
   if (pause) {
-    return
+    return;
   }
   clearInterval(interval);
   interval = null;
   pause = false;
-  button.disabled = true
-  time = 0
-  timer.innerHTML = time
+  button.disabled = true;
+  time = 0;
+  timer.innerHTML = time;
 };
