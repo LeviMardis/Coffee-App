@@ -72,7 +72,7 @@ body {
 	margin: 8vh 0vh 4vh 0vh;
 }
 
-p {
+p, button, input {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -119,6 +119,19 @@ p {
 	min-height: 86px;
 }
 
+/*arrows*/
+#flex-container > div > div > span:nth-of-type(1) {
+	background:url("left.svg") no-repeat;
+	width: 7px;
+	height: 22px;
+}
+#flex-container > div > div > span:nth-of-type(2) {
+	background:url("right.svg") no-repeat;
+	width: 7px;
+	height: 22px;
+}
+
+/*3 text boxes*/
 #flex-container > div > div > p {
   font-family: monospace;
   font-style: normal;
@@ -159,21 +172,33 @@ p {
 	color: #7393E5;
 }
 
-
-div#timer-slider #reset {
+div#timer-slider button {
+	background:url("reset.svg") no-repeat;
+	height: 26px;
+	width: 22px;
 	border: none;
   background-color: transparent;
   font-family: monospace;
-  padding: 0;
+	display: flex;
+	align-items: center;
 }
 
-div#timer-slider #reset:disabled {
-	opacity: 40%;
+div#timer-slider button:disabled {
+	opacity: 0.2;
 }
 
-div#timer-slider #startStop {
-	border: none;
-  background-color: transparent;
-  font-family: monospace;
-  padding: 0;
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox] + label {
+    background:url("play.svg") no-repeat;
+    height: 21px;
+    width: 18px;
+}
+
+input[type=checkbox]:checked + label {
+    background:url("pause.svg") no-repeat;
+    height: 21px;
+    width: 18px;
 }
