@@ -172,7 +172,7 @@ p, button, input {
 	color: #7393E5;
 }
 
-div#timer-slider #reset {
+div#timer-slider button {
 	background:url("reset.svg") no-repeat;
 	height: 26px;
 	width: 22px;
@@ -183,7 +183,7 @@ div#timer-slider #reset {
 	align-items: center;
 }
 
-div#timer-slider #reset:disabled {
+div#timer-slider button:disabled {
 	opacity: 0.2;
 }
 
