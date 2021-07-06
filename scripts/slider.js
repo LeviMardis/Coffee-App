@@ -6,7 +6,7 @@ class Slider {
     this.textDisplay = document.getElementById(display);
     this.xd = null;
     this.x = 0;
-    this.output = 0;
+    this.output = base;
     this.speed = speed;
     this.format = format;
     this.base = base;
@@ -24,9 +24,9 @@ class Slider {
     let textOut = (this.x + this.output) * -1;
     // If 0 or negative hide pre text and keep current display set to 0
     if (Math.floor(textOut) <= 0) {
-      this.preText.innerHTML = `${this.format}${this.base}`
-      this.postText.innerHTML = `${ this.format } ${ this.base + 1 }`;
-      this.textDisplay.innerHTML = `0`;
+      this.preText.innerHTML = null
+      this.postText.innerHTML = `${ this.format }${ this.base + 1 }`;
+      this.textDisplay.innerHTML = `${this.format}${this.base}`;
       this.output = 0;
     } else {
     // Display pre/post/current numbers
