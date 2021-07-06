@@ -72,7 +72,7 @@ body {
 	margin: 8vh 0vh 4vh 0vh;
 }
 
-p {
+p, button, input {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -172,10 +172,6 @@ p {
 	color: #7393E5;
 }
 
-div#timer-slider #reset:disabled {
-	opacity: 40%;
-}
-
 div#timer-slider #reset {
 	background:url("reset.svg") no-repeat;
 	height: 26px;
@@ -187,12 +183,12 @@ div#timer-slider #reset {
 	align-items: center;
 }
 
-input[type=checkbox] {
-    display:none;
+div#timer-slider #reset:disabled {
+	opacity: 0.2;
 }
 
-label {
-	content: '';
+input[type=checkbox] {
+    display:none;
 }
 
 input[type=checkbox] + label {
