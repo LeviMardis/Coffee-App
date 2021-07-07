@@ -6,9 +6,9 @@
     <link rel="shortcut icon" href="./images/favicon.ico"/>
     <link rel="stylesheet" href="./style.css" media="screen" />
     <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8">
   </head>
 
@@ -80,9 +80,13 @@ $.preloadImages("./images/pause.svg");
   </script>
 
 <script type="text/javascript">
-  function page_Load() {
-    setTimeout(function() { window.scrollTo(0, 1); }, 100);
-  }
+window.addEventListener("load",function() {
+  // Set a timeout...
+  setTimeout(function(){
+      // Hide the address bar!
+      window.scrollTo(0, 1);
+  }, 0);
+});
 </script>
 </body>
 
