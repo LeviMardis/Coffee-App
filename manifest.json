@@ -20,7 +20,7 @@
         {
             "src": "/images/maskable_icon.png",
             "type": "image/png",
-            "sizes": "180x180"
+            "sizes": "180x180",
             "purpose": "any maskable"
         }
     ],
