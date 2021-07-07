@@ -68,7 +68,7 @@ body {
 }
 
 #flex-container > div:nth-child(1) {
-	margin: 8vh 0vh 4vh 0vh;
+	margin: 4vh 0vh 2vh 0vh;
 }
 
 p, button, input {
