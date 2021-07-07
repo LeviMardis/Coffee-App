@@ -32,7 +32,7 @@ const numChange = (e, xd) => {
     document.getElementById("pre-coffee").innerHTML = output - 1;
     document.getElementById("post-coffee").innerHTML = output + 1;
     document.getElementById("coffee").innerHTML = output;
-    document.getElementById("pre-water").innerHTML = (output - 1) * roundRatio;
+    document.getElementById("pre-water").innerHTML = roundRatio === 0 ? null : (output - 1) * roundRatio;
     document.getElementById("post-water").innerHTML = (output + 1) * roundRatio;
     document.getElementById("water").innerHTML = output * roundRatio;
   }
