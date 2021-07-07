@@ -20,7 +20,7 @@ ratioDiv.addEventListener("touchstart", (e) => {
 });
 
 waterDiv.addEventListener("touchstart", (e) => {
-  startSlide(e, waterDiv, 'coffee')
+    startSlide(e, waterDiv, 'coffee')
 })
 
 document.addEventListener('touchend', () => {
@@ -32,4 +32,4 @@ document.addEventListener('touchend', () => {
 });
 
 document.getElementById("startStop").addEventListener("change", start);
-document.getElementById("reset").addEventListener("touchstart", reset);
+document.getElementById("reset").addEventListener("touchstart", test);

@@ -18,23 +18,23 @@ const numChange = (e, xd) => {
   // Set the incrememnt speed based on movement
   change = (e.touches[0].clientX - xd) / 20;
   let output = Math.floor((change + coffee) * -1);
-  let roundRatio = Math.ceil(ratio) * -1;
+  let roundRatio = Math.ceil(ratio - 1) * -1;
   // If 0 or negative hide pre text and keep current display set to 0
   if (output <= 0) {
     document.getElementById("pre-coffee").innerHTML = null;
-    document.getElementById("post-coffee").innerHTML = 1;
-    document.getElementById("coffee").innerHTML = 0;
+    document.getElementById("post-coffee").innerHTML = 2;
+    document.getElementById("coffee").innerHTML = 1;
     document.getElementById("pre-water").innerHTML = null;
-    document.getElementById("post-water").innerHTML = roundRatio;
-    document.getElementById("water").innerHTML = 0;
+    document.getElementById("post-water").innerHTML = roundRatio * 2;
+    document.getElementById("water").innerHTML = roundRatio;
   } else {
     // Display pre/post/current numbers
-    document.getElementById("pre-coffee").innerHTML = output - 1;
-    document.getElementById("post-coffee").innerHTML = output + 1;
-    document.getElementById("coffee").innerHTML = output;
-    document.getElementById("pre-water").innerHTML = roundRatio === 0 ? null : (output - 1) * roundRatio;
-    document.getElementById("post-water").innerHTML = (output + 1) * roundRatio;
-    document.getElementById("water").innerHTML = output * roundRatio;
+    document.getElementById("pre-coffee").innerHTML = output;
+    document.getElementById("post-coffee").innerHTML = output + 2;
+    document.getElementById("coffee").innerHTML = output + 1;
+    document.getElementById("pre-water").innerHTML = roundRatio * (output);
+    document.getElementById("post-water").innerHTML = (output + 2) * roundRatio;
+    document.getElementById("water").innerHTML = (output + 1) * roundRatio;
   }
 };
 
@@ -42,25 +42,23 @@ const ratioChange = (e, xd) => {
   // Set the incrememnt speed based on movement
   change = (e.touches[0].clientX - xd) / 60;
   let output = Math.floor((change + ratio) * -1);
-  let roundCoffee = Math.ceil(coffee) * -1;
+  let roundCoffee = Math.ceil(coffee - 1) * -1;
   // If 0 or negative hide pre text and keep current display set to 0
   if (output <= 0) {
     document.getElementById("pre-ratio").innerHTML = null;
-    document.getElementById("post-ratio").innerHTML = "1:1";
-    document.getElementById("ratio").innerHTML = "1:0";
-    document.getElementById("pre-water").innerHTML = null;
-    document.getElementById("post-water").innerHTML = 0;
-    document.getElementById("water").innerHTML = 0;
+    document.getElementById("post-ratio").innerHTML = "1:2";
+    document.getElementById("ratio").innerHTML = "1:1";
+    document.getElementById("pre-water").innerHTML = (roundCoffee - 1) === 0 ? null : roundCoffee - 1;
+    document.getElementById("post-water").innerHTML = roundCoffee + 1;
+    document.getElementById("water").innerHTML = roundCoffee;
   } else {
     // Display pre/post/current numbers
-    document.getElementById("pre-ratio").innerHTML = "1:" + (output - 1);
-    document.getElementById("post-ratio").innerHTML = "1:" + (output + 1);
-    document.getElementById("ratio").innerHTML = "1:" + output;
-    document.getElementById("pre-water").innerHTML =
-      roundCoffee === 0 ? null : (roundCoffee - 1) * output;
-    document.getElementById("post-water").innerHTML =
-      (roundCoffee + 1) * output;
-    document.getElementById("water").innerHTML = roundCoffee * output;
+    document.getElementById("pre-ratio").innerHTML = "1:" + (output);
+    document.getElementById("post-ratio").innerHTML = "1:" + (output + 2);
+    document.getElementById("ratio").innerHTML = "1:" + (output + 1);
+    document.getElementById("pre-water").innerHTML = (roundCoffee - 1) === 0 ? null : (roundCoffee - 1) * (output + 1);
+    document.getElementById("post-water").innerHTML = (roundCoffee + 1)  * (output + 1);
+    document.getElementById("water").innerHTML = roundCoffee * (output + 1);
   }
 };
 
@@ -82,3 +80,9 @@ const ratioSave = () => {
   ratioTouch = false;
   document.removeEventListener("touchmove", ratioChange);
 };
+const test = () => {
+  alert(Math.ceil(coffee))
+  alert(Math.ceil(ratio))
+  alert(Math.ceil(water))
+  alert(Math.ceil(change))
+}
