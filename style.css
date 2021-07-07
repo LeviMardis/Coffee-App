@@ -53,9 +53,8 @@ table {
 body {
 		background: rgba(19, 23, 31, 1);
 		height: 99.4vh;
-		border: 10px solid;
+		border: 2px solid;
 	  border-image-slice: 1;
-	  border-width: 2px;
 		border-image-source: linear-gradient(180deg, #E68673 0%, #E67373 32%, #E673B1 65%, #7393E6 100%);
 		overflow-x: hidden;
     overflow-y: hidden;
@@ -181,6 +180,7 @@ div#timer-slider button {
   font-family: monospace;
 	display: flex;
 	align-items: center;
+	padding: 0px;
 }
 
 div#timer-slider button:disabled {
