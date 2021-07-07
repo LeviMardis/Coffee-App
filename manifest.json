@@ -3,17 +3,17 @@
     "name": "Coffee Collective Timer",
     "icons": [
         {
-            "src": "./images/iPhone_Spotlight_40_2x.png",
+            "src": "/images/iPhone_Spotlight_40_2x.png",
             "type": "image/png",
             "sizes": "80x80"
         },
         {
-            "src": "./images/iPhone_App_60_2x.png",
+            "src": "/images/iPhone_App_60_2x.png",
             "type": "image/png",
             "sizes": "120x120"
         },
         {
-            "src": "./images/iPhone_App_60_3x.png",
+            "src": "/images/iPhone_App_60_3x.png",
             "type": "image/png",
             "sizes": "180x180"
         },
