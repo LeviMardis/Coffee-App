@@ -1,11 +1,11 @@
 {
-    "short_name": "CCA",
+    "short_name": "Coffee Timer",
     "name": "Coffee Collective Timer",
     "icons": [
         {
             "src": "/images/apple-touch-icon.png",
             "type": "image/png",
-            "sizes": "144x144"
+            "sizes": "120x120"
         }
     ],
     "start_url": "/index.html",
