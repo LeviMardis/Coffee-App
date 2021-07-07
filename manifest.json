@@ -3,22 +3,22 @@
     "name": "Coffee Collective Timer",
     "icons": [
         {
-            "src": "/images/apple-touch-icon.png",
+            "src": "./images/apple-touch-icon.png",
             "type": "image/png",
             "sizes": "120x120"
         },
         {
-            "src": "/images/icon_@1x.png",
+            "src": "./images/icon_@1x.png",
             "type": "image/png",
             "sizes": "128x128"
         },
         {
-            "src": "/images/icon_@2x.png",
+            "src": "./images/icon_@2x.png",
             "type": "image/png",
             "sizes": "256x256"
         },
         {
-            "src": "/images/icon_@4x.png",
+            "src": "./images/icon_@4x.png",
             "type": "image/png",
             "sizes": "512x512"
         }
