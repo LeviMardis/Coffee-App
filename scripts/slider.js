@@ -1,57 +1,84 @@
-class Slider {
-  constructor(container, display, speed, format, base) {
-    this.divId = document.getElementById(container);
-    this.preText = document.getElementById("pre-" + display);
-    this.postText = document.getElementById("post-" + display);
-    this.textDisplay = document.getElementById(display);
-    this.xd = null;
-    this.x = 0;
-    this.output = base;
-    this.speed = speed;
-    this.format = format;
-    this.base = base;
-  }
-
-  startSlide = (e) => {
-    // Save screen touch x coordinates and begin listening for touch move
-    this.xd = e.touches[0].clientX;
-    this.divId.addEventListener("touchmove", this.numChange);
-  };
-
-  numChange = (e) => {
-    // Set the incrememnt speed based on movement
-    this.x = (e.touches[0].clientX - this.xd) / this.speed;
-    let textOut = (this.x + this.output) * -1;
-    // If 0 or negative hide pre text and keep current display set to 0
-    if (Math.floor(textOut) <= 0) {
-      this.preText.innerHTML = null
-      this.postText.innerHTML = `${ this.format }${ this.base + 1 }`;
-      this.textDisplay.innerHTML = `${this.format}${this.base}`;
-      this.output = 0;
-    } else {
-    // Display pre/post/current numbers
-      this.preText.innerHTML = `${this.format}${Math.floor(textOut - 1)}`;
-      this.postText.innerHTML = `${this.format}${Math.floor(textOut + 1)}`;
-      this.textDisplay.innerHTML = `${this.format}${Math.floor(textOut)}`;
-    }
-  };
-
-  initialize = () => {
-    // Begin listening for touch start and end events
-    this.divId.addEventListener("touchstart", this.startSlide);
-    document.addEventListener("touchend", () => {
-      // If there has been a corrext touch in this element log the touch end results, else do nothing
-      if (this.xd !== null) {
-        this.output += this.x;
-        this.xd = null;
-      }
-      this.divId.removeEventListener("touchmove", this.numChange);
+const startSlide = (e, div, type) => {
+  // Save screen touch x coordinates and begin listening for touch move
+  let xd = e.touches[0].clientX;
+  if (type === "coffee") {
+    coffeeTouch = true;
+    div.addEventListener("touchmove", (e) => {
+      numChange(e, xd);
     });
-  };
-  get out() {
-    return this.output
+  } else if (type === "ratio") {
+    ratioTouch = true;
+    div.addEventListener("touchmove", (e) => {
+      ratioChange(e, xd);
+    });
   }
-  set out(x) {
-    this.output 
+};
+
+const numChange = (e, xd) => {
+  // Set the incrememnt speed based on movement
+  change = (e.touches[0].clientX - xd) / 20;
+  let output = Math.floor((change + coffee) * -1);
+  let roundRatio = Math.ceil(ratio) * -1;
+  // If 0 or negative hide pre text and keep current display set to 0
+  if (output <= 0) {
+    document.getElementById("pre-coffee").innerHTML = null;
+    document.getElementById("post-coffee").innerHTML = 1;
+    document.getElementById("coffee").innerHTML = 0;
+    document.getElementById("pre-water").innerHTML = null;
+    document.getElementById("post-water").innerHTML = roundRatio;
+    document.getElementById("water").innerHTML = 0;
+  } else {
+    // Display pre/post/current numbers
+    document.getElementById("pre-coffee").innerHTML = output - 1;
+    document.getElementById("post-coffee").innerHTML = output + 1;
+    document.getElementById("coffee").innerHTML = output;
+    document.getElementById("pre-water").innerHTML = (output - 1) * roundRatio;
+    document.getElementById("post-water").innerHTML = (output + 1) * roundRatio;
+    document.getElementById("water").innerHTML = output * roundRatio;
   }
-}
+};
+
+const ratioChange = (e, xd) => {
+  // Set the incrememnt speed based on movement
+  change = (e.touches[0].clientX - xd) / 60;
+  let output = Math.floor((change + ratio) * -1);
+  let roundCoffee = Math.ceil(coffee) * -1;
+  // If 0 or negative hide pre text and keep current display set to 0
+  if (output <= 0) {
+    document.getElementById("pre-ratio").innerHTML = null;
+    document.getElementById("post-ratio").innerHTML = "1:1";
+    document.getElementById("ratio").innerHTML = "1:0";
+    document.getElementById("pre-water").innerHTML = null;
+    document.getElementById("post-water").innerHTML = 0;
+    document.getElementById("water").innerHTML = 0;
+  } else {
+    // Display pre/post/current numbers
+    document.getElementById("pre-ratio").innerHTML = "1:" + (output - 1);
+    document.getElementById("post-ratio").innerHTML = "1:" + (output + 1);
+    document.getElementById("ratio").innerHTML = "1:" + output;
+    document.getElementById("pre-water").innerHTML =
+      roundCoffee === 0 ? null : (roundCoffee - 1) * output;
+    document.getElementById("post-water").innerHTML =
+      (roundCoffee + 1) * output;
+    document.getElementById("water").innerHTML = roundCoffee * output;
+  }
+};
+
+const coffeeSave = () => {
+  coffee += change;
+  if (coffee > 0) {
+    coffee = 0;
+  }
+  change = 0;
+  coffeeTouch = false;
+  document.removeEventListener("touchmove", numChange);
+};
+const ratioSave = () => {
+  ratio += change;
+  if (ratio > 0) {
+    ratio = 0;
+  }
+  change = 0;
+  ratioTouch = false;
+  document.removeEventListener("touchmove", ratioChange);
+};

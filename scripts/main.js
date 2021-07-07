@@ -1,22 +1,37 @@
-const sliderDiv = document.getElementById("coffee-slider");
+const coffeeDiv = document.getElementById("coffee-slider");
+const waterDiv = document.getElementById("water-slider")
 const ratioDiv = document.getElementById("ratio-slider");
 const preText = document.getElementById("pre-coffee");
 const postText = document.getElementById("post-coffee");
 const textDisplay = document.getElementById("coffee");
-let coffee = null;
-let ratio = 1
-let change = 0
-let touch = false;
+let coffee = 0;
+let ratio = 0;
+let water = 0
+let change = 0;
+let coffeeTouch = false;
+let ratioTouch = false;
 
-sliderDiv.addEventListener("touchstart", (e) => {
-  startSlide(e, sliderDiv, 'slider');
+coffeeDiv.addEventListener("touchstart", (e) => {
+  startSlide(e, coffeeDiv, "coffee");
 });
 
-document.addEventListener("touchend", () => {
-  coffee = save(coffee, change, sliderDiv);
+ratioDiv.addEventListener("touchstart", (e) => {
+  startSlide(e, ratioDiv, "ratio");
 });
 
-document.getElementById("startStop").addEventListener("touchstart", start);
+waterDiv.addEventListener("touchstart", (e) => {
+  startSlide(e, waterDiv, 'coffee')
+})
+
+document.addEventListener('touchend', () => {
+  if (coffeeTouch) {
+    coffeeSave();
+  } else if (ratioTouch) {
+    ratioSave()
+  }
+});
+
+document.getElementById("startStop").addEventListener("change", start);
 document.getElementById("reset").addEventListener("touchstart", reset);
 
 document.getElementById("timer").innerHTML = 0.0;
