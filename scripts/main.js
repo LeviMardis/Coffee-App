@@ -32,4 +32,8 @@ document.addEventListener('touchend', () => {
 });
 
 document.getElementById("startStop").addEventListener("change", start);
-document.getElementById("reset").addEventListener("touchstart", test);
+document.getElementById("reset").addEventListener("touchstart", reset);
+window.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+});

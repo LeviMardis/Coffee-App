@@ -80,9 +80,3 @@ const ratioSave = () => {
   ratioTouch = false;
   document.removeEventListener("touchmove", ratioChange);
 };
-const test = () => {
-  alert(Math.ceil(coffee))
-  alert(Math.ceil(ratio))
-  alert(Math.ceil(water))
-  alert(Math.ceil(change))
-}
