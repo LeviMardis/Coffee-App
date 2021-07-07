@@ -100,7 +100,6 @@ p, button, input {
   display: flex;
   align-items: center;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   margin: 0px 0px 4px 14px;
 }
 
