@@ -33,5 +33,3 @@ document.addEventListener('touchend', () => {
 
 document.getElementById("startStop").addEventListener("change", start);
 document.getElementById("reset").addEventListener("touchstart", reset);
-
-document.getElementById("timer").innerHTML = 0.0;
