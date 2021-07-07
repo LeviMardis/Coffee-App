@@ -6,10 +6,25 @@
             "src": "/images/apple-touch-icon.png",
             "type": "image/png",
             "sizes": "120x120"
+        },
+        {
+            "src": "/images/icon_@1x.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/images/icon_@2x.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/images/icon_@4x.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": "/index.html",
-    "background_color": "#000000",
+    "background_color": "#13171F",
     "display": "standalone",
-    "theme_color": "#ffffff"
+    "theme_color": "13171F"
 }
