@@ -13,6 +13,11 @@
             "sizes": "60x60"
         },
         {
+            "src": ".images/iPhone_PWA_72_2x.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
             "src": "./iPhone_App_60_3x.png",
             "type": "image/png",
             "sizes": "180x180"
