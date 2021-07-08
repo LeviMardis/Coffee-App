@@ -3,37 +3,37 @@
     "name": "Coffee Collective Timer",
     "icons": [
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/iPhone_Spotlight_40_2x.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-80x80.png",
             "type": "image/png",
             "sizes": "80x80"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/iPhone_App_60_2x.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-120x120.png",
             "type": "image/png",
-            "sizes": "60x60"
+            "sizes": "120x120"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/iPhone_PWA_72_2x.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-114x114.png",
             "type": "image/png",
             "sizes": "144x144"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/iPad_App_76_2x.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-152x152.png",
             "type": "image/png",
             "sizes": "152x152"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/iPhone_App_60_3x.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-180x180.png",
             "type": "image/png",
             "sizes": "180x180"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/ic_launcher_xxxhdpi.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "https://levimardis.github.io/Coffee-App/images/ic_launcher_google-play-store.png",
+            "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-512x512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
