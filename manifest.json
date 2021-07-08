@@ -3,6 +3,11 @@
     "name": "Coffee Collective Timer",
     "icons": [
         {
+            "src": "https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc7275.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
             "src": "https://levimardis.github.io/Coffee-App/apple-touch-icon-80x80.png",
             "type": "image/png",
             "sizes": "80x80"
