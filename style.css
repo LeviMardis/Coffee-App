@@ -103,6 +103,10 @@ p, button, input {
   margin: 0px 0px 4px 14px;
 }
 
+#flex-container > div > p > span {
+	color: #4C5980;
+}
+
 /*sliders*/
 #flex-container > div > div {
   display: flex;
