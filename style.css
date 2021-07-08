@@ -147,7 +147,7 @@ p, button, input {
 }
 
 #flex-container > div > div p:nth-of-type(odd):not(#timer) {
-  color: #1A1F2B;
+  color: #0E0F12;
 	font-size: 1.7rem;
 	line-height: 1.7rem;
 }
