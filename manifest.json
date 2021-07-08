@@ -18,6 +18,11 @@
             "sizes": "144x144"
         },
         {
+            "src": "images/iPad_App_76_2x.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
             "src": "iPhone_App_60_3x.png",
             "type": "image/png",
             "sizes": "180x180"
