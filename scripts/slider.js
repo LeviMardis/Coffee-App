@@ -15,11 +15,11 @@ const startSlide = (e, div, type) => {
 };
 
 const numChange = (e, xd) => {
-  // Set the incrememnt speed based on movement
+  // Set the incrememnt speed based on movement / add current number
   change = (e.touches[0].clientX - xd) / 20;
   let output = Math.floor((change + coffee) * -1);
   let roundRatio = Math.ceil(ratio - 1) * -1;
-  // If 0 or negative hide pre text and keep current display set to 0
+  // If 0 or negative hide pre text and keep current display set to 1
   if (output <= 0) {
     document.getElementById("pre-coffee").innerHTML = null;
     document.getElementById("post-coffee").innerHTML = 2;
@@ -43,7 +43,7 @@ const ratioChange = (e, xd) => {
   change = (e.touches[0].clientX - xd) / 60;
   let output = Math.floor((change + ratio) * -1);
   let roundCoffee = Math.ceil(coffee - 1) * -1;
-  // If 0 or negative hide pre text and keep current display set to 0
+  // If 0 or negative hide pre text and keep current display set to 1
   if (output <= 0) {
     document.getElementById("pre-ratio").innerHTML = null;
     document.getElementById("post-ratio").innerHTML = "1:2";
