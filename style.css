@@ -51,9 +51,10 @@ table {
 /*BODY*/
 
 body {
-		background: rgba(19, 23, 31, 1);
+		background: #13171F;
 		height: 99.4vh;
-		border: 2px solid;
+		border-width: 2px;
+		border-style: solid;
 	  border-image-slice: 1;
 		border-image-source: linear-gradient(180deg, #E68673 0%, #E67373 32%, #E673B1 65%, #7393E6 100%);
 		overflow-x: hidden;
@@ -101,10 +102,6 @@ p, button, input {
   align-items: center;
   letter-spacing: 0.15em;
   margin: 0px 0px 4px 14px;
-}
-
-#flex-container > div > p > span {
-	color: #4C5980;
 }
 
 /*sliders*/
@@ -168,6 +165,12 @@ p, button, input {
 #flex-container > div:nth-child(4) > p {
 	color: #E573B1;
 }
+#flex-container > div > p > span {
+	display: inline-block;
+	color: #4C5980;
+	font-size: 1rem;
+	line-height: 1rem;
+}
 
 
 /*---TIMER*/
@@ -175,7 +178,7 @@ p, button, input {
 	color: #7393E5;
 }
 
-div#timer-slider button {
+#timer-slider button {
 	background:url("./images/reset.svg") no-repeat;
 	height: 26px;
 	width: 22px;
@@ -187,7 +190,7 @@ div#timer-slider button {
 	padding: 0px;
 }
 
-div#timer-slider button:disabled {
+#timer-slider button:disabled {
 	opacity: 0.2;
 }
 
