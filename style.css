@@ -93,7 +93,7 @@ p, button, input {
 
 /*titles*/
 #flex-container > div > p {
-  font-family: monospace;
+  font-family: "SF Mono", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -133,7 +133,7 @@ p, button, input {
 
 /*3 text boxes*/
 #flex-container > div > div > p {
-  font-family: monospace;
+  font-family: "SF Mono", monospace;
   font-style: normal;
   font-weight: normal;
   text-align: center;
@@ -184,7 +184,7 @@ p, button, input {
 	width: 22px;
 	border: none;
   background-color: transparent;
-  font-family: monospace;
+  font-family: "SF Mono", monospace;
 	display: flex;
 	align-items: center;
 	padding: 0px;
